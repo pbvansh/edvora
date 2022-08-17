@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    
+    .NavIteam {
+        @apply font-semibold tracking-wide cursor-pointer text-gray-400 hover:text-white text-xl
+    }
+
+}
