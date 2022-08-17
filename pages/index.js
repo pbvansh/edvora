@@ -1,15 +1,16 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
+import Welcome from '../components/Welcome'
 
 
 export default function Home() {
   return (
-    <div className>
+    <div className="bg-black min-h-screen">
       <Navbar/>
-      {/* <video autoPlay={true} width="320" height="240">
-        <source src="https://edvora-public.sgp1.cdn.digitaloceanspaces.com/public-updated/img/FinalHomepageVideo.mp4" type="video/mp4"/>
-      </video> */}
-        </div>
+      <Welcome/>
+      <Footer/>
+    </div>
         )
 }
