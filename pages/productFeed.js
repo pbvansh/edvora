@@ -3,6 +3,7 @@ import axios from 'axios'
 import Product from "../components/Product";
 
 const productFeed = ({ product }) => {
+
   return (
     <div className=" bg-gray-400">
       <Navbar />

@@ -10,8 +10,8 @@ const Navbar = () => {
         </div>
         <div className="flex text-white flex-grow space-x-5 md:space-x-10 justify-end items-center whitespace-nowrap mr-3">
             <p className="NavIteam" onClick={()=>router.push('/userFeed')}>User</p>
-            <p className="NavIteam" onClick={()=>router.push('/productFeed')}>Product</p>
-            <p className="NavIteam">Report</p>
+            <p className="NavIteam" onClick={()=>router.push('/productFeed')}>Products</p>
+            <p className="NavIteam" onClick={()=>router.push('/dashboard')}>Dashboard</p>
             <p className="NavIteam">My Contact</p>
             <span>
                 |
