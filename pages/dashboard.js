@@ -1,6 +1,8 @@
 import Navbar from "../components/Navbar";
 import axios from 'axios';
 import BarChart from "../components/BarChart";
+import PiChart from "../components/PiChart";
+import LineChart from "../components/LineChart";
 
 const dashboard = ({ orders, product, users }) => {
 
@@ -10,6 +12,8 @@ const dashboard = ({ orders, product, users }) => {
             <Navbar />
             <div>
                 <BarChart product={product}/>
+                <PiChart product={product}/>
+                <LineChart product={product}/>
             </div>
         </div>
     )
