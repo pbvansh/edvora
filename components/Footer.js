@@ -2,9 +2,9 @@
 const Footer = () => {
   return (
     <div className="text-center mt-3 flex justify-evenly items-center bg-black bg-opacity-80">
-      <p className=" text-white text-sm tracking-wide md:tracking-wide">Copyright © 2022 Pratik Vansh. All rights reserved.</p>
+      <p className=" text-white text-xs tracking-wide md:tracking-wide">Copyright © 2022 Pratik Vansh. All rights reserved.</p>
 
-      <div className="flex justify-center space-x-5 p-5">
+      <div className="flex justify-center space-x-2 md:space-x-5 md:px-5 py-5">
         <div className=""s="bg-black rounded-full">
           <a href="https://github.com/pbvansh">
             <svg
