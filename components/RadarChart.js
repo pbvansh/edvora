@@ -1,4 +1,4 @@
-import { Chart as ChartJS, Tooltip, Legend, ArcElement,RadialLinearScale } from 'chart.js'
+import { Chart as ChartJS, Tooltip, Legend, ArcElement, RadialLinearScale } from 'chart.js'
 import { Radar } from 'react-chartjs-2'
 
 ChartJS.register(
@@ -15,7 +15,7 @@ const RadarChart = ({ product, order }) => {
     const data = {
         labels: product.map(x => x.name),
         datasets: [{
-            label: 'Selling',
+            label: 'sold out',
             data: sell.map(x => x),
             fill: true,
             backgroundColor: 'rgba(255, 99, 132, 0.2)',
@@ -53,11 +53,11 @@ const RadarChart = ({ product, order }) => {
         plugins: {
             title: {
                 display: true,
-                text: 'RadarChart of All product in stock AND have been sold.',
-                font : {
-                    size : 50
+                text: 'Radar Chart of All product in stock AND sold out products',
+                font: {
+                    size: 50
                 },
-                padding : 20
+                padding: 20
             }
         }
     }
@@ -68,7 +68,7 @@ const RadarChart = ({ product, order }) => {
                 product && (
 
                     <Radar
-                       className='p-20'
+                        className='p-20'
                         data={data}
                         options={options}
                     />

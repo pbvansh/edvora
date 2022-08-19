@@ -1,4 +1,4 @@
-import { Chart as ChartJS, PointElement, CategoryScale, LinearScale,LineElement } from 'chart.js'
+import { Chart as ChartJS, PointElement, CategoryScale, LinearScale, LineElement } from 'chart.js'
 import { Line } from 'react-chartjs-2'
 
 ChartJS.register(
@@ -53,10 +53,10 @@ const LineChart = ({ product }) => {
             title: {
                 display: true,
                 text: 'Line Chart of All product AND their price',
-                font : {
-                    size : 50
+                font: {
+                    size: 50
                 },
-                padding : 5
+                padding: 5
             }
         }
     }

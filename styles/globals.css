@@ -5,7 +5,7 @@
 @layer components {
     
     .NavIteam {
-        @apply font-semibold tracking-wide text-base lg:tracking-widest cursor-pointer text-gray-400 hover:text-white lg:text-xl
+        @apply font-semibold text-sm  tracking-wide md:text-base lg:tracking-widest cursor-pointer text-gray-400 hover:text-white lg:text-xl px-1 py-1 md:px-3 md:py-2 hover:border-black hover:border transition transform duration-300 ease-in-out
     }
     
     .btn {

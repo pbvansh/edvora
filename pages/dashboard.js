@@ -5,6 +5,7 @@ import PiChart from "../components/PiChart";
 import LineChart from "../components/LineChart";
 import Pro_Price_BarChart from "../components/Pro_Price_BarChart";
 import RadarChart from "../components/RadarChart";
+import Footer from "../components/Footer";
 
 const dashboard = ({ orders, product, users }) => {
 
@@ -13,12 +14,13 @@ const dashboard = ({ orders, product, users }) => {
 
             <Navbar />
             <div>
-                <BarChart product={product} order = {orders} user= {users}/>
-                <RadarChart product={product} order = {orders}/>
-                <Pro_Price_BarChart product={product}/>
-                <PiChart product={product}/>
-                <LineChart product={product}/>
+                <BarChart product={product} order={orders} user={users} />
+                <RadarChart product={product} order={orders} />
+                <Pro_Price_BarChart product={product} />
+                <PiChart product={product} />
+                <LineChart product={product} />
             </div>
+            <Footer />
         </div>
     )
 }

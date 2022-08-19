@@ -1,8 +1,8 @@
-import { Chart as ChartJS, Tooltip , Legend , ArcElement } from 'chart.js'
+import { Chart as ChartJS, Tooltip, Legend, ArcElement } from 'chart.js'
 import { Pie } from 'react-chartjs-2'
 
 ChartJS.register(
-    Tooltip , Legend , ArcElement
+    Tooltip, Legend, ArcElement
 )
 
 
@@ -50,10 +50,10 @@ const PiChart = ({ product }) => {
             title: {
                 display: true,
                 text: 'Pie Chart of All product AND their price',
-                font : {
-                    size : 50
+                font: {
+                    size: 50
                 },
-                padding : 50
+                padding: 50
             }
         }
     }
@@ -63,8 +63,8 @@ const PiChart = ({ product }) => {
             {
                 product && (
 
-                    <Pie 
-                    className='p-20'
+                    <Pie
+                        className='p-20'
                         height={500}
                         width={500}
                         data={data}

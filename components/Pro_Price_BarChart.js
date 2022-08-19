@@ -1,4 +1,4 @@
-import { Chart as ChartJS, BarElement, CategoryScale, LinearScale,Tooltip } from 'chart.js'
+import { Chart as ChartJS, BarElement, CategoryScale, LinearScale, Tooltip } from 'chart.js'
 import { Bar } from 'react-chartjs-2'
 
 ChartJS.register(
@@ -9,7 +9,7 @@ ChartJS.register(
 )
 
 
-const Pro_Price_BarChart = ({ product}) => {
+const Pro_Price_BarChart = ({ product }) => {
 
     const data = {
         labels: product?.map(x => x.name),
@@ -53,8 +53,8 @@ const Pro_Price_BarChart = ({ product}) => {
             title: {
                 display: true,
                 text: 'Bar Chart of All product AND their price',
-                font : {
-                    size : 50
+                font: {
+                    size: 50
                 }
             }
         }
