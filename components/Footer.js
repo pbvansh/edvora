@@ -13,7 +13,7 @@ const Footer = () => {
           </a>
         </div>
 
-        <div class="bg-white rounded-full">
+        <div className="bg-white rounded-full">
           <a href="https://www.linkedin.com/in/pratik-vansh-955b74232/">
             <svg
               className="w-10 h-10 text-blue-500 cursor-pointer fill-current p-2 hover:text-blue-800"
