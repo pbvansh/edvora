@@ -1,22 +1,27 @@
-import { Chart as ChartJS, BarElement, CategoryScale, LinearScale,Tooltip } from 'chart.js'
+import { Chart as ChartJS, BarElement, CategoryScale, LinearScale,Tooltip ,Title} from 'chart.js'
 import { Bar } from 'react-chartjs-2'
 
 ChartJS.register(
     BarElement,
     LinearScale,
     CategoryScale,
-    Tooltip
+    Tooltip,
+    Title
 )
 
 
-const BarChart = ({ product }) => {
+const BarChart = ({ product,order,user }) => {
 
+   const qnty = Array(20).fill(0)
+    order.map((q)=>{
+        qnty[q.user_id-1] = qnty[q.user_id-1] + q.quantity;;
+    })
 
     const data = {
-        labels: product?.map(x => x.name),
+        labels: user?.map(x => x.name),
         datasets: [{
             label: `${product.length} Products Available`,
-            data: product?.map(x => x.selling_price),
+            data: qnty?.map(x => x),
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
@@ -49,11 +54,21 @@ const BarChart = ({ product }) => {
             labels: {
                 fontSize: 26
             }
+        },
+        plugins: {
+            title: {
+                display: true,
+                text: 'BarChart of All users and total number of products ordered by user',
+                font : {
+                    size : 50
+                },
+                padding : 20,
+            }
         }
     }
 
     return (
-        <div>
+        <div className='m-10'>
             {
                 product && (
 

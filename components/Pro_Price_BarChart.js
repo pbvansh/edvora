@@ -1,17 +1,20 @@
-import { Chart as ChartJS, Tooltip , Legend , ArcElement } from 'chart.js'
-import { Pie } from 'react-chartjs-2'
+import { Chart as ChartJS, BarElement, CategoryScale, LinearScale,Tooltip } from 'chart.js'
+import { Bar } from 'react-chartjs-2'
 
 ChartJS.register(
-    Tooltip , Legend , ArcElement
+    BarElement,
+    LinearScale,
+    CategoryScale,
+    Tooltip
 )
 
 
-const PiChart = ({ product }) => {
+const Pro_Price_BarChart = ({ product}) => {
 
     const data = {
         labels: product?.map(x => x.name),
         datasets: [{
-            label: `${product.lenngth} Products Available`,
+            label: `${product.length} Products Available`,
             data: product?.map(x => x.selling_price),
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
@@ -34,8 +37,8 @@ const PiChart = ({ product }) => {
     }
 
     const options = {
-        type: 'Pie',
-        maintainAspectRatio: true,
+        type: 'bar',
+        maintainAspectRatio: false,
         scales: {
             y: {
                 beginAtZero: true
@@ -49,24 +52,22 @@ const PiChart = ({ product }) => {
         plugins: {
             title: {
                 display: true,
-                text: 'Pie Chart of All product AND their price',
+                text: 'Bar Chart of All product AND their price',
                 font : {
                     size : 50
-                },
-                padding : 50
+                }
             }
         }
     }
 
     return (
-        <div className='m-20'>
+        <div>
             {
                 product && (
 
-                    <Pie 
-                    className='p-20'
-                        height={500}
-                        width={500}
+                    <Bar
+                        className='p-5'
+                        height={400}
                         data={data}
                         options={options}
                     />
@@ -76,4 +77,4 @@ const PiChart = ({ product }) => {
     )
 }
 
-export default PiChart
+export default Pro_Price_BarChart

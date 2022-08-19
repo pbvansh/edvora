@@ -14,7 +14,7 @@ const LineChart = ({ product }) => {
     const data = {
         labels: product?.map(x => x.name),
         datasets: [{
-            label: `${product.lenngth} Products Available`,
+            label: `${product.length} Products Available`,
             data: product?.map(x => x.selling_price),
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
@@ -47,6 +47,16 @@ const LineChart = ({ product }) => {
         legend: {
             labels: {
                 fontSize: 26
+            }
+        },
+        plugins: {
+            title: {
+                display: true,
+                text: 'Line Chart of All product AND their price',
+                font : {
+                    size : 50
+                },
+                padding : 5
             }
         }
     }
